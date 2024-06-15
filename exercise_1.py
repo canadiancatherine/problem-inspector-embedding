@@ -17,7 +17,7 @@ from collections import defaultdict
 
 from dwave.system import DWaveSampler, EmbeddingComposite
 import networkx as nx
-
+import dwave.inspector
 import matplotlib
 try:
     import matplotlib.pyplot as plt
@@ -61,7 +61,7 @@ print("\nEmbedding found:\n", sampleset.info['embedding_context']['embedding'])
 
 print("\nSampleset:")
 print(sampleset)
-
+dwave.inspector.show(sampleset)  
 # ------- Print results to user -------
 print("\nSolutions:")
 print('-' * 60)

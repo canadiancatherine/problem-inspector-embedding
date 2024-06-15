@@ -14,6 +14,7 @@
 
 # ------ Import necessary packages ----
 from collections import defaultdict
+import dwave.inspector
 
 from dwave.system import DWaveSampler, FixedEmbeddingComposite
 from minorminer import find_embedding
@@ -64,7 +65,7 @@ response = sampler.sample_qubo(Q,
 
 print("\nSampleset:")
 print(response)
-
+dwave.inspector.show(response)  
 # ------- Print results to user -------
 print("\nSolutions:")
 print('-' * 60)
